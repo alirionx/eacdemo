@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="EAC - Demo Web App" content="width=device-width, initial-scale=1.0">        
+    <title>EAC - Demo Web App</title>
+        
+    <link rel="shortcut icon" href="{{ url_for('static', filename='gfx/favicon.ico') }}" >
+    <link rel="icon" href="{{ url_for('static', filename='gfx/favicon.ico') }}" type="image/x-icon">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='eacdemo.css') }}" >
+
+    <script src="{{ url_for('static', filename='eacdemo.js') }}" ></script>
+      
+</head>
+
+<body>
+
+<div id="headBlock">
+    <img css="logo" src="{{ url_for('static', filename='gfx/as-logo_small_white.png') }}" />
+    <div css="headline">EAC - Demo Web App</div>
+</div>
+
+<div id="snapTarget"></div>
+
+<section class="content">
+    {% block content %}{% endblock %}
+</section>
+
+<!--div id="pageFooter">Da Footer</div-->
+
+</body>
+</html>

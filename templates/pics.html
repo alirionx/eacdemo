@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+    <table class="picViewer"><tr>
+        <td>
+            <div css="arrowLeft" onclick="location.href='{{prevId}}'"></div>
+        </td>
+        <td>
+            <div css="picScreen">
+                <img src="{{ picPath }}" />
+            </div>
+        </td>
+        <td>
+            <div css="arrowRight" onclick="location.href='{{nextId}}'"></div>
+        </td>
+    </tr></table>
+
+{% endblock %}

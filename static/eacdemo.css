@@ -1,0 +1,105 @@
+html{
+	height: 100%;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+	*max-height: 80%;
+	min-width:800px;
+	margin:0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size:12px;
+	padding:120px 8px 8px 8px;
+	background-color:#dcdcdc;
+    *background-image: linear-gradient(#BBB, rgb(216, 216, 216));
+    background-image: url("/static/gfx/bg-pattern.png");
+	background-repeat:repeat;
+	*background-size: cover;
+	background-attachment: fixed;
+}
+#headBlock{
+    position: fixed;
+    top:0px;
+    left:0;
+    width:101%;
+    min-width:800px;
+    background-color: #000;
+    height:110px;
+    *border: 1px solid #000;
+    background-position: 0px 0px, center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    z-index:2;
+}
+#headBlock img[css=logo]{
+	position:absolute;
+	left:16px;
+	top:6px;
+	*height:110px;
+}
+#headBlock div[css=headline]{
+    display:table;
+    position: relative;
+    margin:44px auto auto auto;
+    padding-right:20px;
+    *background-color: #FFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align:center;
+    color:#FFF;
+}
+.picViewer{
+    margin: 40px auto 100px auto;
+    min-width: 800px;
+}
+.picViewer td{
+    text-align: center;
+    *background-color: rgb(218, 228, 247);
+}
+.picViewer td:first-child{
+    width: 120px;
+    vertical-align: middle;
+    text-align: left;
+}
+.picViewer td:nth-child(2) {
+    width: 710px;
+    height:550px;
+    vertical-align: middle;
+}
+.picViewer td:last-child{
+    width: 120px;
+    vertical-align: middle;
+    text-align: right;
+}
+.picViewer div[css=arrowLeft]{
+    width: 40px;
+    height: 40px;
+    border-left: 4px solid #999;
+    border-top: 4px solid #999;
+    transform: rotate(-45deg);
+    margin-left:20px;
+    cursor:pointer;
+}
+.picViewer img{
+    width:700px;
+    border-radius: 14px;
+    border:1px solid #444;
+    box-shadow: #222 2px 4px 10px;
+}
+.picViewer div[css=arrowLeft]:hover{
+    border-left: 4px solid #000;
+    border-top: 4px solid #000;
+}
+.picViewer div[css=arrowRight]{
+    width: 40px;
+    height: 40px;
+    border-right: 4px solid #999;
+    border-top: 4px solid #999;
+    transform: rotate(45deg);
+    margin-left:60px;
+    cursor:pointer;
+}
+.picViewer div[css=arrowRight]:hover{
+    border-right: 4px solid #000;
+    border-top: 4px solid #000;
+}
