@@ -6,4 +6,4 @@ pip3 install flask
 mkdir /data
 git clone https://github.com/alirionx/eacdemo /data/eacdemo
 chmod +x /data/eacdemo/eacdemo.py
-/data/eacdemo/eacdemo.py 80
+/data/eacdemo/eacdemo.py
