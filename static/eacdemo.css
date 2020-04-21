@@ -103,3 +103,13 @@ body{
     border-right: 4px solid #000;
     border-top: 4px solid #000;
 }
+
+.hostnameFooter{
+    position:fixed;
+    right:20px;
+    bottom: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    text-shadow: #FFF 0px 1px;
+}

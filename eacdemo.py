@@ -2,6 +2,7 @@
 
 import os
 import sys
+import socket
 import json
 
 from flask import Flask, request, redirect, url_for, send_from_directory, session, render_template
@@ -13,6 +14,7 @@ app.debug = True
 scriptDir = os.path.dirname(os.path.realpath(__file__))
 picsDir = scriptDir + '/static/pics'
 allowedFileEndings = [".png", ".jpg", ".jpeg", ".gif"]
+curHostname = socket.gethostname()
 #-----------------------------
 
 #-------------------------------------------------------------------------
@@ -56,7 +58,8 @@ def pic_show(picId):
         picId=picId,
         nextId=nextId,
         prevId=prevId,
-        picPath=picPath
+        picPath=picPath,
+        curHostname=curHostname
     )
 
 
