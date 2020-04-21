@@ -47,6 +47,38 @@ resource "aws_instance" "websrvs" {
   }
 }
 
+resource "aws_elb" "eac-lb" {
+  name               = "foobar-terraform-elb"
+  availability_zones = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
+
+  listener {
+    instance_port     = 5000
+    instance_protocol = "http"
+    lb_port           = 80
+    lb_protocol       = "http"
+  }
+
+
+  health_check {
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    timeout             = 3
+    target              = "HTTP:8000/0"
+    interval            = 30
+  }
+
+  instances                   = ["${aws_instance.eac-web0.id}", "${aws_instance.eac-web1.id}"]
+  cross_zone_load_balancing   = true
+  idle_timeout                = 400
+  connection_draining         = true
+  connection_draining_timeout = 400
+
+  tags = {
+    Name  = "eac-lb"
+    Group = "eac-demo"
+  }
+}
+
 
 #resource "null_resource" "rmfile" {
 #  provisioner "local-exec" {
