@@ -34,7 +34,7 @@ resource "aws_security_group" "eacdemo_in" {
 }
 
 resource "aws_instance" "websrvs" {
-  count         = 3
+  count         = 2
   ami           = "ami-0cc0a36f626a4fdf5"
   instance_type = "t2.micro"
   key_name      = "mhp_aws_dev"
